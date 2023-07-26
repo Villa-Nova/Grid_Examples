@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+}
+
+/* App 1 */
+
+#appOne {
+  border: 2px solid #fff;
+
+  width: 100%;
+  height: 100vh;
+  
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  /* Setar a altura do pai muda a altura das linhas */
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.headerOne {
+  background-color: #ff0055;
+
+  grid-column: 1;
+  grid-row: 1/5;
+}
+
+.mainOne {
+  background-color: #5500ff;
+
+/* Linhas virtuais, ver pelo dev-tools */
+  grid-column: 2/5;
+  grid-row: 1/4;
+}
+
+.asideOne {
+  background-color: #ffff00;
+
+  grid-column: 2;
+  grid-row: 4;
+}
+
+.footerOne {
+  background-color: #55ff00;
+
+  grid-column: 3/5;
+  grid-row: 4;
+}
+
+/* App 2 */
+
+#appTwo {
+  border: 2px solid #fff;
+
+  width: 100%;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas: 
+    "top top top"
+    "mid mid side"
+    "mid mid side"
+    "bot bot bot"
+  ;
+  gap: 10px; 
+
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.headerTwo {
+  background-color: #ff0055;
+  grid-area: top;
+}
+
+.mainTwo {
+  background-color: #5500ff;
+  grid-area: mid;
+}
+
+.asideTwo {
+  background-color: #ffff00;
+  grid-area: side;
+}
+
+.footerTwo {
+  background-color: #55ff00;
+  grid-area: bot;
+}
+
+/* App 3 */
+
+#appThree {
+  border: 2px solid #fff;
+
+  width: 100%;
+  height: 100vh;
+
+  display: grid;
+/* Shorthand grid template: */
+  grid-template:
+    "A A B" 1fr
+    "C D D" 1fr
+    "E E F" 1fr / 1fr 1fr 1fr
+  ;
+/* area  |  row  |  column */
+  gap: 10px; 
+
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.headerThree {
+  background-color: #ff0055;
+  grid-area: A;
+}
+
+.mainThree {
+  background-color: #5500ff;
+  grid-area: B;
+}
+
+.asideThree {
+  background-color: #ffff00;
+  grid-area: C;
+}
+
+.footerThree {
+  background-color: #55ff00;
+  grid-area: D;
+}
+
+.divThree_One {
+  background-color: #ff8800;
+  grid-area: E;
+}
+
+.divThree_Two {
+  background-color: #9900ff;
+  grid-area: F;
+}
