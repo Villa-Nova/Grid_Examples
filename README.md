@@ -1,3 +1,3 @@
 # Grid
 
-Projeto feito para o treino de contrições de template com grid
+Um arquivo simples de html e css feito no intuito de aprender manipular layouts com grid
